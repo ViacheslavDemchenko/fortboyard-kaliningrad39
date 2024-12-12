@@ -1,0 +1,13 @@
+extends ./../layouts/main
+
+block variables
+  - let pageTitle = 'Форт Боярд в Калининграде — цена, отзывы и фото | Официальный сайт';
+
+block content
+  .wrapper
+    include ../components/blocks/navbar/navbar.pug
+    include ../components/sections/main-block/main-block.pug
+    include ../components/sections/show/show.pug
+    include ../components/sections/form-calculation/form-calculation.pug
+    //- include ./../components/sections/header/header.pug
+    //- include ./../components/sections/footer/footer.pug
