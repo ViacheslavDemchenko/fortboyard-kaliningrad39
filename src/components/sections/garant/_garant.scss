@@ -1,0 +1,40 @@
+.garant {
+  position: relative;
+  z-index: 2;
+  max-width: 115rem;
+  margin-bottom: 13rem;
+  background-color: var(--yellow_1);
+
+  .key {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .coins {
+    position: absolute;
+    left: 10rem;
+    top: 32rem;
+  }
+
+  &_inner {
+    max-width: 50rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: 8.9rem 4.5rem;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 4.1rem;
+    }
+
+    p {
+      font-size: 2rem;
+      line-height: 1.27;
+    }
+  }
+}

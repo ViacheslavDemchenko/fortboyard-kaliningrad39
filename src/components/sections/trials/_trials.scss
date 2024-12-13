@@ -1,0 +1,88 @@
+.trials {
+  position: relative;
+  margin: 6rem 0 10rem 0;
+
+  .compass-cut {
+    position: absolute;
+    top: -10rem;
+    right: -24rem;
+    width: 52rem;
+    height: 21rem;
+    transform: rotate(-29deg);
+    overflow: hidden;
+  }
+
+  &_inner {
+    position: relative;
+    width: 100%;
+
+    h2 {
+      margin: 1.2rem auto 1.2rem auto;
+    }
+
+    .compass {
+      position: absolute;
+      right: 3rem;
+      width: 18.2rem;
+      height: 23.3rem;
+    }
+
+    .gull {
+      position: absolute;
+      bottom: 20.4rem;
+      left: calc(50% - 5rem);
+      width: 10.1rem;
+      height: 10.2rem;
+    }
+
+    .trials_list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 6rem 0.6rem 21.6rem;
+
+      .trials_item {
+        position: relative;
+        width: 41.666%;
+        margin-bottom: 9.5rem;
+
+        &:nth-child(4n+1) .trials_item-img,
+        &:nth-child(4n+4) .trials_item-img {
+          transform: rotate(-5deg) !important;
+        }
+        
+        &:nth-child(4n+2) .trials_item-img, 
+        &:nth-child(4n+3) .trials_item-img {
+          transform: rotate(5deg) !important;
+        }
+
+        &:nth-child(even) {
+          top: 216px;
+        }
+        
+        &-img {
+          margin-bottom: 5.6rem;
+          border-radius: 0.4rem;
+          overflow: hidden;
+          max-width: 43rem;
+        }
+
+        &-content {
+
+          h3 {
+            margin-bottom: 1.2rem;
+            text-align: center;
+            font-size: 2.4rem;
+            line-height: 2.8rem;
+            font-weight: 700;
+          }
+
+          p {
+            text-align: center;
+            font-size: 1.7rem;
+          }
+        }
+      }
+    }
+  }
+}
