@@ -1,10 +1,11 @@
 .after-show {
-  margin-top: 10rem;
+  margin: 10rem 0 6rem 0;
 
   &_inner {
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 
     h2 {
       max-width: 93rem;
@@ -14,20 +15,40 @@
       font-weight: 600;
       line-height: 1.15;
     }
+  }
 
-    &_list {
+  &_list {
+    display: flex;
+    justify-content: space-between;
+  }
 
-      &_item {
+  &_item {
+    width: 33.333%;
+    max-width: 32rem;
 
-      }
-
-      &_img {
-
-      }
-
-      &_text {
-        
-      }
+    &:nth-of-type(odd) .after-show_img {
+      transform: rotate(-5deg);
     }
+
+    &:nth-of-type(even) .after-show_img {
+      transform: rotate(5deg);
+    }
+  }
+
+  &_img {
+    width: 29.4rem;
+    height: 19.8rem;
+    margin-bottom: 3.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  &_text {
+    max-width: 26rem;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.8rem;
   }
 }

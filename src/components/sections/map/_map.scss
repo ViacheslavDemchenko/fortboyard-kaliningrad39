@@ -1,0 +1,103 @@
+.map {
+  padding: 3rem 0 7rem 0;
+  background-image: url('../img/map_bg.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @supports (background-image: image-set(url('../img/map_bg.avif') 1x, url('../img/map_bg@2x.avif') 2x)) {
+    background-image: image-set(
+      url('../img/map_bg.avif') 1x,
+      url('../img/map_bg@2x.avif') 2x
+    );
+  }
+
+  // Fallback for browsers that do not support AVIF
+  @supports not (background-image: image-set(url('../img/map_bg.avif') 1x)) {
+    background-image: url('../img/map_bg.jpg');
+  }
+
+  // Retina for fallback
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    @supports not (background-image: image-set(url('../img/map_bg.avif') 1x)) {
+      background-image: url('../img/map_bg@2x.jpg');
+    }
+  }
+
+  h2 {
+    margin-bottom: 5rem;
+    text-align: left;
+    color: var(--white_1);
+
+    span {
+      font-size: 4.8rem;
+    }
+  }
+
+  &_inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .map-block {
+      width: 63rem;
+      height: 45.9rem;
+      overflow: hidden;
+    }
+
+    .contacts {
+      margin-bottom: 3rem;
+
+      h3 {
+        margin-bottom: 2rem;
+        font-size: 2.2rem;
+        line-height: 1.37;
+        font-weight: 700;
+        background: linear-gradient(to bottom, #FF9901, #FF8C39 30%, #FFC701 99%, #FFE925);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      a {
+        font-size: 2.2rem;
+        font-weight: 500;
+        color: var(--gray_2);
+        text-decoration: underline;
+      }
+
+      &_block {
+        margin-bottom: 3rem;
+
+        p {
+          margin-bottom: 3rem;
+          font-size: 2.2rem;
+          font-weight: 500;
+          color: var(--gray_2);
+        }
+      }
+
+      .socials {
+        display: flex;
+
+        .social {
+          width: 4rem;
+          height: 4rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: var(--white_1);
+          border-radius: 0.5rem;
+          
+          &:nth-of-type(1) {
+            margin-right: 3rem;
+          }
+        }
+
+        img {
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+    }
+  }
+}
