@@ -516,41 +516,41 @@ input {
   background-repeat: no-repeat;
 }
 
-@supports (background-image: url("../img/class_bg.avif")) {
+@supports (background-image: url("../img/main_block_bg.avif")) {
   .main-block {
-    background-image: url("../img/class_bg.avif");
+    background-image: url("../img/main_block_bg.avif");
   }
 
 @media (min-resolution: 192dpi) {
     .main-block {
-      background-image: url("../img/class_bg@2x.avif");
+      background-image: url("../img/main_block_bg@2x.avif");
     }
 }
 }
 
-@supports not (background-image: url("../img/class_bg.avif")) {
-@supports (background-image: url("../img/class_bg.webp")) {
+@supports not (background-image: url("../img/main_block_bg.avif")) {
+@supports (background-image: url("../img/main_block_bg.webp")) {
     .main-block {
-      background-image: url("../img/class_bg.webp");
+      background-image: url("../img/main_block_bg.webp");
     }
 
 @media (min-resolution: 192dpi) {
       .main-block {
-        background-image: url("../img/class_bg@2x.webp");
+        background-image: url("../img/main_block_bg@2x.webp");
       }
 }
 }
 }
 
-@supports not (background-image: url("../img/class_bg.avif")) {
-@supports not (background-image: url("../img/class_bg.webp")) {
+@supports not (background-image: url("../img/main_block_bg.avif")) {
+@supports not (background-image: url("../img/main_block_bg.webp")) {
     .main-block {
-      background-image: url("../img/class_bg.jpg");
+      background-image: url("../img/main_block_bg.jpg");
     }
 
 @media (min-resolution: 192dpi) {
       .main-block {
-        background-image: url("../img/class_bg@2x.jpg");
+        background-image: url("../img/main_block_bg@2x.jpg");
       }
 }
 }
