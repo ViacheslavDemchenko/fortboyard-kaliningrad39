@@ -1,0 +1,173 @@
+.delight {
+  position: relative;
+  margin-bottom: 8rem;
+
+  &::before {
+    position: absolute;
+    content: "";
+    z-index: 10;
+    top: 0;
+    bottom: 4rem;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 42.09%, rgba(0, 0, 0, 0.5) 100%);
+  }
+
+  &_inner {
+    width: 100%;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 6.4rem;
+      max-width: 75rem;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 4.3rem;
+      line-height: 1.15;
+      font-weight: 700;
+    }
+  }
+
+  &_block {
+    position: relative;
+    width: 100%;
+    height: 47rem;
+    margin-bottom: 6rem;
+    background-size: cover;
+    background-position: 100% 28%;
+    background-repeat: no-repeat;
+
+    // AVIF
+    @supports (background-image: url('../img/delight_bg.avif')) {
+      background-image: url('../img/delight_bg.avif');
+  
+      // Retina AVIF
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url('../img/delight_bg@2x.avif');
+      }
+    }
+  
+    // WebP
+    @supports not (background-image: url('../img/delight_bg.avif')) {
+      @supports (background-image: url('../img/delight_bg.webp')) {
+        background-image: url('../img/delight_bg.webp');
+  
+        // Retina WebP
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          background-image: url('../img/delight_bg@2x.webp');
+        }
+      }
+    }
+  
+    // Fallback JPG
+    @supports not (background-image: url('../img/delight_bg.avif')) {
+      @supports not (background-image: url('../img/delight_bg.webp')) {
+        background-image: url('../img/delight_bg.jpg');
+  
+        // Retina JPG
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          background-image: url('../img/delight_bg@2x.jpg');
+        }
+      }
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      z-index: 10;
+      width: 100%;
+      height: 3.2rem;
+    }
+
+    &::before {
+      top: -2.6rem;
+      background: url("../img/border-top.png") repeat-x top;
+
+    }
+
+    &::after {
+      background: url("../img/border-bottom.png") repeat-x top;
+      bottom: -2.3rem;
+    }
+
+    &-text {
+      position: relative;
+      z-index: 20;
+      text-align: left;
+      max-width: 52.4rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 3rem 0;
+      color: var(--white_1);
+
+      h3 {
+        max-width: 42rem;
+        margin-bottom: 2rem;
+        font-size: 4rem;
+        line-height: 4.6rem;
+        font-weight: 700;
+      }
+
+      p {
+        opacity: .9;
+        font-size: 2rem;
+        line-height: 2.6rem;
+      }
+    }
+
+    &-circle {
+      position: absolute;
+      z-index: 100;
+      right: 4rem;
+      bottom: -6rem;
+      width: 37.2rem;
+      height: 37.2rem;
+      text-align: center;
+      padding: 7.9rem 3.1rem 1.5rem;
+      border-radius: 50%;
+      box-shadow: 0 3.6rem 3.6rem rgba(0, 0, 0, .1);
+      background-color: var(--yellow_1);
+      background-size: 17rem;
+      background-position: 50% 100%;
+      background-repeat: no-repeat;
+    
+      // WebP
+      @supports (background-image: url('../img/grill.webp')) {
+        background-image: url('../img/grill.webp');
+    
+        // Retina WebP
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          background-image: url('../img/grill@2x.webp');
+        }
+      }
+    
+      // Fallback PNG
+      @supports not (background-image: url('../img/grill.webp')) {
+        background-image: url('../img/grill.png');
+    
+        // Retina PNG
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+          background-image: url('../img/grill@2x.png');
+        }
+      }
+
+      p {
+
+        &:nth-of-type(1) {
+          margin-bottom: 1rem;
+          font-size: 2rem;
+          line-height: 2.6rem;
+          font-weight: 700;
+        }
+
+        &:nth-of-type(2) {
+          font-size: 1.6rem;
+          line-height: 2.1rem;
+        }
+      }
+    }
+  }
+}

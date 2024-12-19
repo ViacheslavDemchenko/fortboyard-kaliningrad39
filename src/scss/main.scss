@@ -44,6 +44,8 @@
 @import "./../components/blocks/navbar/_navbar"; // Навбар (белый узкий блок вверху сайта)
 @import "./../components/blocks/address/_address"; // Адресс в шапке сайта
 
+// Главная
+
 // Секции
 @import "./../components/sections/main-block/_main-block"; // Основной блок
 @import "./../components/sections/show/_show"; // Блок на главной (В формате игрового шоу...)
@@ -52,3 +54,30 @@
 @import "./../components/sections/garant/_garant"; // Жетлый блок (Гарант хорошего настроения)
 @import "./../components/sections/after-show/_after-show"; // Блок (После шоу веселье не заканчивается! ...)
 @import "./../components/sections/map/_map"; // Блок с картой и контактами
+@import "./../components/sections/carousel-circle/_carousel-circle"; // Блок круг (Почувствуйте себя героем настоящего приключения)
+
+
+// Страница Детский день рождения
+@import "./../components/sections/main-block/_main-child-birthday"; // Основной блок
+@import "./../components/sections/programs/_programs"; // Желтый блок (Ваши дети станут героем игры Форт Боярд)
+@import "./../components/sections/slider-thumbnails/_slider-thumbnails"; // Слайдер в блоке (Мы провели более 1 000 праздников ...)
+@import "./../components/sections/organization/_organization"; // Блок (Возьмем на себя все организационные заботы...)
+@import "./../components/sections/delight/_delight"; // Блок (Мы сделаем всё, чтобы и ребенок...)
+@import "./../components/sections/calculation-coast/_calculation-coast"; // Блок (Получите расчет стоимости праздника...)
+
+// Игра классом
+@import "./../components/sections/main-block/_main-class"; // Основной блок
+@import "./../components/sections/exciting-game/_exciting-game"; // Блок (Ваш класс станет героем увлекательной игры)
+@import "./../components/sections/delight/_delight-class"; // Блок (Мы объединяем одноклассников на новом уровне)
+@import "./../components/sections/pleasure/_pleasure"; // Блое (Мы сделаем все, чтобы вы наслаждались праздником)
+@import "./../components/sections/calculation-coast/_calculation-cost-holiday"; // Блок (Получите расчет стоимости праздника и зафиксируйте за собой скидку *)
+
+// Выпускной
+@import "./../components/sections/programs/_programs-class"; // Блок (Школьники станут героями увлекательной игры Форт Боярд)
+@import "./../components/sections/exciting-game/_exciting-game-graduation"; // Блок (Мы организуем для вас...)
+@import "./../components/sections/organization/_organization-concerns"; // Блок (Доверьте нам все заботы по организации мероприятия)
+@import "./../components/sections/calculation-coast/_calculation-coast-graduation"; // Блок с формой (Зафиксируйте стоимость выпускного заранее!...)
+
+
+// Слайдеры
+

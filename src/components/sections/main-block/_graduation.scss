@@ -1,0 +1,35 @@
+.main-block.main-block--graduation {
+  // AVIF
+  @supports (background-image: url('../img/class_bg.avif')) {
+    background-image: url('../img/class_bg.avif');
+
+    // Retina AVIF
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url('../img/class_bg@2x.avif');
+    }
+  }
+
+  // WebP
+  @supports not (background-image: url('../img/class_bg.avif')) {
+    @supports (background-image: url('../img/class_bg.webp')) {
+      background-image: url('../img/class_bg.webp');
+
+      // Retina WebP
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url('../img/class_bg@2x.webp');
+      }
+    }
+  }
+
+  // Fallback JPG
+  @supports not (background-image: url('../img/class_bg.avif')) {
+    @supports not (background-image: url('../img/class_bg.webp')) {
+      background-image: url('../img/class_bg.jpg');
+
+      // Retina JPG
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url('../img/class_bg@2x.jpg');
+      }
+    }
+  }
+}

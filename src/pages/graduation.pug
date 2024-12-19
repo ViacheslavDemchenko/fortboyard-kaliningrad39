@@ -1,0 +1,15 @@
+extends ./../layouts/main
+
+block variables
+  - let pageTitle = 'Квест на выпускной в Форт Боярд в Калинингаде | Официальный сайт';
+
+block content
+  .wrapper
+    include ../components/blocks/navbar/navbar.pug
+    include ../components/sections/main-block/graduation.pug
+    include ../components/sections/programs/programs-class.pug
+    include ../components/sections/exciting-game/exciting-game-graduation.pug
+    include ../components/sections/organization/organization-concerns.pug
+    include ../components/sections/calculation-coast/calculation-coast-graduation.pug
+    include ../components/sections/map/map.pug
+    include ./../components/sections/footer/footer.pug 

@@ -6,6 +6,7 @@ export default function sliderTrials() {
       spaceBetween: 10,
       loopedSlides: 1,
       slidesPerView: 1,
+      grabcursor: true,
       loop: true,
       navigation: {
         nextEl: ".trials_slider-button-next",
@@ -13,6 +14,7 @@ export default function sliderTrials() {
       },
       pagination: {
         el: ".swiper-pagination",
+        clickable: true,
       },
     });
   }

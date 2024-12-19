@@ -351,6 +351,7 @@ if (window && window.NodeList && !NodeList.prototype.forEach) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_sliderTrials__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/sliderTrials */ "./src/js/modules/sliderTrials.js");
+/* harmony import */ var _modules_sliderThumbs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/sliderThumbs */ "./src/js/modules/sliderThumbs.js");
 __webpack_require__(/*! polyfill-nodelist-foreach */ "./node_modules/polyfill-nodelist-foreach/index.js"); // Полифил для поддержки метода forEach в IE11+ и Safari9
 __webpack_require__(/*! svgxuse */ "./node_modules/svgxuse/svgxuse.js"); // Полифил для поддержки IE11+ и старыми браузерами использования SVG через use 
 
@@ -358,9 +359,11 @@ __webpack_require__(/*! svgxuse */ "./node_modules/svgxuse/svgxuse.js"); // По
 // import smoothScroll from './modules/smoothScroll';
 
 
+
 // mobileMenu();
 // smoothScroll();
 Object(_modules_sliderTrials__WEBPACK_IMPORTED_MODULE_0__["default"])();
+Object(_modules_sliderThumbs__WEBPACK_IMPORTED_MODULE_1__["default"])();
 
 /***/ }),
 
@@ -4665,6 +4668,41 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;function _type
 
 /***/ }),
 
+/***/ "./src/js/modules/sliderThumbs.js":
+/*!****************************************!*\
+  !*** ./src/js/modules/sliderThumbs.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return sliderThumbs; });
+/* harmony import */ var _libs_swiper_bundle_min_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../libs/swiper-bundle.min.js */ "./src/js/libs/swiper-bundle.min.js");
+/* harmony import */ var _libs_swiper_bundle_min_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_libs_swiper_bundle_min_js__WEBPACK_IMPORTED_MODULE_0__);
+ // Слайдер
+
+function sliderThumbs() {
+  var swiper = new _libs_swiper_bundle_min_js__WEBPACK_IMPORTED_MODULE_0___default.a(".mySwiper", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    // freeMode: true,
+    watchSlidesProgress: true
+  });
+  var swiper2 = new _libs_swiper_bundle_min_js__WEBPACK_IMPORTED_MODULE_0___default.a(".mySwiper2", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    thumbs: {
+      swiper: swiper
+    }
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js/modules/sliderTrials.js":
 /*!****************************************!*\
   !*** ./src/js/modules/sliderTrials.js ***!
@@ -4685,13 +4723,15 @@ function sliderTrials() {
       spaceBetween: 10,
       loopedSlides: 1,
       slidesPerView: 1,
+      grabcursor: true,
       loop: true,
       navigation: {
         nextEl: ".trials_slider-button-next",
         prevEl: ".trials_slider-button-prev"
       },
       pagination: {
-        el: ".swiper-pagination"
+        el: ".swiper-pagination",
+        clickable: true
       }
     });
   }

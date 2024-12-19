@@ -3,7 +3,74 @@
   z-index: 2;
   max-width: 115rem;
   margin-bottom: 13rem;
-  background-color: var(--yellow_1);
+  // background-image: url('../img/yellow_bg.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  // AVIF
+  @supports (background-image: url('../img/yellow_bg.avif')) {
+    background-image: url('../img/yellow_bg.avif');
+
+    // Retina AVIF
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url('../img/yellow_bg@2x.avif');
+    }
+  }
+
+  // WebP
+  @supports not (background-image: url('../img/yellow_bg.avif')) {
+    @supports (background-image: url('../img/yellow_bg.webp')) {
+      background-image: url('../img/yellow_bg.webp');
+
+      // Retina WebP
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url('../img/yellow_bg@2x.webp');
+      }
+    }
+  }
+
+  // Fallback JPG
+  @supports not (background-image: url('../img/yellow_bg.avif')) {
+    @supports not (background-image: url('../img/yellow_bg.webp')) {
+      background-image: url('../img/yellow_bg.jpg');
+
+      // Retina JPG
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        background-image: url('../img/yellow_bg@2x.jpg');
+      }
+    }
+  }
+
+  @supports (background-image: image-set(url('../img/yellow_bg.avif') 1x, url('../img/yellow_bg@2x.avif') 2x)) {
+    background-image: image-set(
+      url('../img/yellow_bg.avif') 1x,
+      url('../img/yellow_bg@2x.avif') 2x
+    );
+  }
+
+  // // Fallback for browsers that do not support AVIF
+  // @supports not (background-image: image-set(url('../img/yellow_bg.avif') 1x)) {
+  //   background-image: url('../img/yellow_bg.jpg');
+  // }
+
+  // // Retina for fallback
+  // @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  //   @supports not (background-image: image-set(url('../img/yellow_bg.avif') 1x)) {
+  //     background-image: url('../img/yellow_bg@2x.jpg');
+  //   }
+  // }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0.001rem solid var(--yellow_1);
+    width: 105%;
+    height: 105%;
+  }
 
   .key {
     position: absolute;
@@ -15,24 +82,27 @@
   .coins {
     position: absolute;
     left: 10rem;
-    top: 32rem;
+    top: 36rem;
   }
 
   &_inner {
-    max-width: 50rem;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
-    padding: 8.9rem 4.5rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 12rem 4.5rem;
 
     h2 {
+      max-width: 41rem;
       font-size: 4rem;
       font-weight: 700;
       line-height: 4.1rem;
     }
 
     p {
+      max-width: 41rem;
       font-size: 2rem;
       line-height: 1.27;
     }

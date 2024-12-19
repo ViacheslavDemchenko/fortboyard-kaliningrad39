@@ -1,0 +1,16 @@
+extends ./../layouts/main
+
+block variables
+  - let pageTitle = 'Детский день рождения — отметить в Калинингаде в Форт Боярд | Официальный сайт';
+
+block content
+  .wrapper
+    include ../components/blocks/navbar/navbar.pug
+    include ../components/sections/main-block/main-child-birthday.pug
+    include ../components/sections/programs/programs.pug
+    include ../components/sections/slider-thumbnails/slider-thumbnails.pug
+    include ../components/sections/organization/organization.pug
+    include ../components/sections/delight/delight.pug
+    include ../components/sections/calculation-coast/calculation-coast.pug
+    include ../components/sections/map/map.pug
+    include ./../components/sections/footer/footer.pug

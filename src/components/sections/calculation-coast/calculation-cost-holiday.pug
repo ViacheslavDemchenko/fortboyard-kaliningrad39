@@ -1,0 +1,50 @@
+section.calculation-coast.calculation-cost--holiday
+  .container 
+    .calculation-coast_inner
+      .calculation-coast_text 
+        h2 Получите расчет стоимости праздника и зафиксируйте за собой скидку *
+      .calculation-coast_form
+        form.calculation-form(action="#" method="post")
+          h1.calculation-form__title Оставьте свои контакты и мы расскажем о нас подробнее!
+          .calculation-form__field-group
+            label.calculation-form__label(for="name") Как к вам обращаться?
+            input.calculation-form__input#name(type="text" placeholder="Как к вам обращаться?")
+            input.calculation-form__input(type="tel" placeholder="7 (123) 456-78-90")
+
+            // Добавляем выпадающий список
+            .dropdown
+              button.dropdown-toggle(type="button") 
+                span Выберите мероприятие
+                i.arrow
+              ul.dropdown-menu
+                li
+                  input(type="checkbox" id="option1" name="events[]" value="Поход классом")
+                  label(for="option1") Поход классом
+                li
+                  input(type="checkbox" id="option2" name="events[]" value="День Рождения ребенка")
+                  label(for="option2") День Рождения ребенка
+                li
+                  input(type="checkbox" id="option3" name="events[]" value="23 февраля или 8 марта")
+                  label(for="option3") 23 февраля или 8 марта (специальная программа)
+                li
+                  input(type="checkbox" id="option4" name="events[]" value="Начало учебного года")
+                  label(for="option4") Начало учебного года
+                li
+                  input(type="checkbox" id="option5" name="events[]" value="Выпускной")
+                  label(for="option5") Выпускной
+                li
+                  input(type="checkbox" id="option6" name="events[]" value="День Рождения взрослого")
+                  label(for="option6") День Рождения взрослого
+                li
+                  input(type="checkbox" id="option7" name="events[]" value="Корпоратив или Тимбилдинг")
+                  label(for="option7") Корпоратив или Тимбилдинг
+                li
+                  input(type="checkbox" id="option8" name="events[]" value="Другое")
+                  label(for="option8") Другое
+
+            button.calculation-form__button Связаться с 
+          .calculation-form__note Заполняя форму, вы даете согласие на обработку своих персональных данных и соглашаетесь с 
+            a.calculation-form__link(href="#") Политикой конфиденциальности.
+            br
+            | *если предполагает происходит в день обращения
+
